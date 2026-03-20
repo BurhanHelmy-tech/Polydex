@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polydex - Polygon Database</title>
+    <!-- Use a cleaner, friendly font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="top-nav">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>POLYDEX</h1>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <!-- POLYDEX VIEW -->
+            <section id="polydex-view" class="view-section active">
+                
+                <div class="panel left-panel">
+                    <div class="bg-scanlines"></div>
+                    
+                    <div class="hologram-stage" id="hologram-stage">
+                        <div class="hologram-platform">
+                            <div class="platform-ring outer"></div>
+                            <div class="platform-ring inner"></div>
+                            <div class="platform-center"></div>
+                        </div>
+                        <div id="poly-image-container"></div>
+                    </div>
+                    
+                    <div class="poly-info-container">
+                        <div class="pill-id" id="poly-id">000</div>
+                        <h2 class="poly-name" id="poly-name">LOADING...</h2>
+                    </div>
+                    
+                    <div class="data-module clean-stats">
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-label">SIDES</div>
+                                <div class="stat-value" id="stat-sides">--</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-label">VERTICES</div>
+                                <div class="stat-value" id="stat-vertices">--</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-label">DIAGONALS</div>
+                                <div class="stat-value" id="stat-diagonals">--</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-label">ANGLES</div>
+                                <div class="stat-value" id="stat-angles">--</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel right-panel">
+                    <div class="right-top-bar">
+                        <div class="grid-stats">
+                            <div class="record-icon"></div>
+                            <span id="record-count">0</span>
+                        </div>
+                        <div class="actions">
+                            <button id="nav-btn" class="sort-btn">
+                                <span class="btn-icon">-</span>
+                                <span class="btn-content">Take the Quiz!</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="scroll-container">
+                        <div class="cards-grid" id="cards-grid">
+                            <!-- Cards injected here -->
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- QUIZ VIEW -->
+            <section id="quiz-view" class="view-section hidden">
+                <div class="panel full-panel">
+                    <div class="quiz-header">
+                        <h2>TRAINING SIMULATION</h2>
+                        <div class="score-tracker">SCORE: <span id="score-val" class="highlight">0</span></div>
+                    </div>
+                    
+                    <div class="quiz-content" id="quiz-content">
+                        <div class="question-tracker">Question <span id="q-current">1</span> of 5</div>
+                        <div class="question-box">
+                            <h3 id="question-text">Initializing parameters...</h3>
+                        </div>
+                        
+                        <div class="options-grid" id="options-grid">
+                            <!-- Options injected here -->
+                        </div>
+                        
+                        <div class="feedback-area hidden" id="feedback-area">
+                            <div id="feedback-message" class="feedback-text">CORRECT</div>
+                            <button id="next-q-btn" class="action-btn">
+                                <span class="btn-content">Next Question</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- FINAL RESULTS SCREEN -->
+                    <div class="quiz-results hidden" id="quiz-results">
+                        <h2 class="results-title">SIMULATION COMPLETE!</h2>
+                        <div class="results-score">
+                            <div class="stars" id="results-stars"></div>
+                            <h3>Your Final Score</h3>
+                            <div class="final-score" id="final-score-val">0</div>
+                        </div>
+                        <div class="results-actions">
+                            <button id="retry-btn" class="action-btn primary-action">Play Again</button>
+                            <button id="back-polydex-btn" class="action-btn secondary-action">Back to Polydex</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
