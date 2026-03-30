@@ -241,5 +241,11 @@ function generateNumericOptions(correct, count) {
     return arr.sort(() => Math.random() - 0.5);
 }
 
+// Example of the first two rows in script.js:
+const polygons = [
+    { id: 1, formatId: "#001", name: "Segi tiga", image: "Assets/Triangle_(3_sides)_nobg.png", sides: 3, vertices: 3, diagonals: 0, angles: 180 },
+    { id: 2, formatId: "#002", name: "Sisi empat", image: "Assets/Quadrilateral_Square_(4_sides)_nobg.png", sides: 4, vertices: 4, diagonals: 2, angles: 360 },
+    // ... update the rest to "Assets/..." as well!
+];
 // Start app
 init();
