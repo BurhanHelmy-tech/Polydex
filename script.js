@@ -247,5 +247,19 @@ const polygons = [
     { id: 2, formatId: "#002", name: "Sisi empat", image: "Assets/Quadrilateral_Square_(4_sides)_nobg.png", sides: 4, vertices: 4, diagonals: 2, angles: 360 },
     // ... update the rest to "Assets/..." as well!
 ];
+
+function toggleView() {
+    inQuizMode = !inQuizMode;
+    if (inQuizMode) {
+        viewPolydex.classList.add('hidden');
+        viewQuiz.classList.remove('hidden');
+        navBtn.querySelector('.btn-content').textContent = "KEMBALI"; // Lebih ringkas
+        // ... baki kod yang lain
+    } else {
+        viewQuiz.classList.add('hidden');
+        viewPolydex.classList.remove('hidden');
+        navBtn.querySelector('.btn-content').textContent = "AMBIL KUIZ!";
+    }
+}
 // Start app
 init();
