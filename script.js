@@ -253,8 +253,19 @@ function toggleView() {
     if (inQuizMode) {
         viewPolydex.classList.add('hidden');
         viewQuiz.classList.remove('hidden');
-        navBtn.querySelector('.btn-content').textContent = "KEMBALI"; // Lebih ringkas
-        // ... baki kod yang lain
+        navBtn.querySelector('.btn-content').textContent = "KEMBALI"; 
+        
+        // --- INI ADALAH "BAKI KOD" YANG HILANG ITU ---
+        // Reset Quiz State
+        quizScore = 0;
+        currentQuestionNumber = 0;
+        document.getElementById('score-val').textContent = quizScore;
+        document.getElementById('quiz-results').classList.add('hidden');
+        document.getElementById('quiz-content').classList.remove('hidden');
+        
+        startQuizRound();
+        // ---------------------------------------------
+        
     } else {
         viewQuiz.classList.add('hidden');
         viewPolydex.classList.remove('hidden');
