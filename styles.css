@@ -674,11 +674,46 @@ body::before {
 }
 
 @media (max-width: 900px) {
-    .app-wrapper { padding: 10px; }
-    .view-section { flex-direction: column; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .left-panel { flex: none; padding: 20px; min-height: 50vh; }
-    .right-panel { flex: none; min-height: 50vh; }
-    .poly-name { font-size: 2rem; }
+    /* Benarkan body dan wrapper memanjang ke bawah dan ditatal */
+    body { 
+        height: auto; 
+        overflow-y: auto; 
+    }
+    .app-wrapper { 
+        padding: 15px; 
+        height: auto; 
+        min-height: 100vh; 
+    }
+    
+    /* Ubah susunan panel kepada atas-bawah */
+    .view-section { 
+        flex-direction: column; 
+        height: auto; 
+        overflow: visible;
+    }
+    
+    /* Buang had ketinggian supaya panel menyokong kandungan */
+    .left-panel { 
+        flex: none; 
+        padding: 20px 10px; 
+        min-height: auto; 
+    }
+    .right-panel { 
+        flex: none; 
+        min-height: auto; 
+        margin-top: 20px; 
+        padding: 20px;
+    }
+
+    /* Ubah container kad supaya tidak terperangkap dalam kotak berasingan */
+    .scroll-container {
+        overflow-y: visible; 
+    }
+    
+    .stats-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px; 
+    }
+    .poly-name { font-size: 2.2rem; }
     .options-grid { grid-template-columns: 1fr; }
 }
