@@ -717,3 +717,75 @@ body::before {
     .poly-name { font-size: 2.2rem; }
     .options-grid { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 600px) {
+    /* Kemaskini Header */
+    .top-nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    .action-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Kecilkan Hologram Stage */
+    .hologram-platform {
+        width: 200px;
+        height: 40px;
+    }
+    .platform-ring.outer {
+        width: 170px;
+        height: 30px;
+    }
+    #poly-image-container img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    /* Ubah saiz Teks dan Stat */
+    .poly-name {
+        font-size: 1.8rem;
+    }
+    .stat-value {
+        font-size: 1.3rem;
+    }
+
+    /* Kemaskini Grid Kad Poligon */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 kad sebaris untuk telefon */
+        gap: 10px;
+    }
+    .poly-card {
+        height: 90px; /* Jadikan kad sedikit rendah */
+    }
+    .card-id-strip {
+        font-size: 0.75rem;
+    }
+
+    /* Antaramuka Kuiz */
+    .full-panel {
+        padding: 20px 15px;
+    }
+    .quiz-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .quiz-header h2 {
+        font-size: 1.5rem;
+    }
+    .question-box h3 {
+        font-size: 1.4rem;
+    }
+    .results-title {
+        font-size: 2rem;
+    }
+    .final-score {
+        font-size: 4rem;
+    }
+    .results-actions {
+        flex-direction: column;
+    }
+}
